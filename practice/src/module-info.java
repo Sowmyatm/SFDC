@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kppra
+ *
+ */
+module practice {
+}

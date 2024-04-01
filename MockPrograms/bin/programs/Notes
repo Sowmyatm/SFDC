@@ -1,0 +1,72 @@
+//Why multiple inheritance is not there in java?
+------------------------------------------------
+The reason behind this is to prevent ambiguity.Consider a case where class B extends class A and 
+Class C and both class A and C have the same method display().Now java compiler cannot decide, which display 
+method it should inherit. To prevent such situation, multiple inheritances is not allowed in java.
+
+//annotations in java
+-----------------------
+//@override - to override a method from a superclass
+//@deprecated-  It indicates that a declaration has been replaced by a newer form
+//@supress warning- It is used to inform the compiler to suppress specified compiler warnings
+
+//primitive data types- int, bool,char,float,double -> cannot create objects of primitive datatypes, 
+//coz it doesn't have any class
+ 
+//non primitive- String->objs can be created
+ 
+//Can we overload constructor? -- yes
+//Constructor name should be same as class name
+//Constructor has no static or void.i.e, it doesn't return any value. It is not a function
+//Constructor will be called immediately after creating the object of particular class
+//access modifiers can be used for constructors
+//constructors cannot be abstract, static and final
+	
+
+//Final is a keyword used to make the variables,methods and class as constant
+//If methods and classes are made final, it can't be inherited by child class. (see example testPackage) 
+
+//Finalize is a method
+//related to garbage collection
+//Garbage collector destroys the objects that has no reference
+//Finalize is automatically called just  before garbage collector to perform cleanup memory processing
+//Finalize method will be automatically called even if we dont call it in main function	
+
+//Finally block always executes after try-catch block no matter if you have an exception or not.
+
+//errors can not be handled
+//exception is a problem that occurs during runtime time bcoz there will be some problem in the code
+//runtime exception or unchecked exceptions occurs during runtime due to prb in the code, it can be handled using try catch block
+
+//unchecked exceptions/runtime exceptions occurs at the runtime, can be addressed using try-catch blocks
+//-arrayindex out of bound, arithmetic, nullpointer etc
+
+//checked/compile time exceptions or other exceptions-- cannot be handled. it has to be addressed at the compile time 
+//IO exceptions
+
+//try catch block can be used for exceptions, for 1 try block there should be atleast 1 catch block
+//can have nested try catch block
+
+//throwable - is an interface and is also a super class  of exceptions and errors. they extends from throwable class
+//throw--is a keyword to throw an exception explicitly, located in method body. Only one exception type can be thrown
+
+//throws--keyword used to declare an exception, located in method declaration. can declare multiple exceptions
+
+//generics--parameterized types.(works with different data types)
+//collections- set of interfaces and classes
+
+//private variables can be accessed using setter and getter methods
+
+//public-	The class is accessible by any other class
+
+//Default -The class is only accessible by classes in the same package. This is used when 
+//you don't specify a modifier.
+
+//Private -The code is only accessible within the declared class
+
+//Protected -The code is accessible in the same package and subclasses.
+
+Handling dynamic elts: Absolute Path Method, Relative XPath Contains or Starts With A Text,Identify by Index
+
+
+

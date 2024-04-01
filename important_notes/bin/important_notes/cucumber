@@ -1,0 +1,41 @@
+ Hooks
+ ------
+ Cucumber supports hooks, which are blocks of code that run before or after each scenario.
+ You can define them anywhere in your project or step definition layers, using the methods 
+ @Before and @After. Cucumber Hooks allows us to better manage the code workflow and helps 
+ us to reduce code redundancy.
+ 
+ //TAGS :
+In Cucumber, tags are annotations that you can apply to features, scenarios, or scenario outlines 
+in your feature files. 
+ 
+ Difference btn data table and scenario outline
+ -------------------------------------------------
+ For example, if you were testing a login system, you might use a data table to test a 
+ large number of different username and password combinations. 
+ 
+ //scenrio outlne
+ A scenario outline is used when you want to test a single scenario with different data features, scenarios is 
+ written with the collaboration of dev,  QA, PO, 
+ 
+ //cu options tag-  link b/w feature file and st def file. it is part of test runner file, 
+ with anno @cucumberoptions. it conatins params like feature and glue. f file has the path 
+ of f lie and glue has the pat of step def file.
+ 
+ feature file- has high level descrpn of scenarios and steps in gherkin lang, with keyword
+ feature
+ 
+ exmple keyword- cn perform dataDrivenTestig using keyword examples. data sets to be taken
+  into consideration shall be passed below examples section one after the other seperated 
+  by | symbol
+  
+  //purpose of scenario outline= execute same scenario over multiple values
+  
+  //bkg keyword - used to define a step or series of steps that are common to all tests
+  in the FFile.
+  
+  //Step dfn file = all keywords used in file are added in step def file. a java extn file
+  //contains methods to the feature file
+  
+  
+ 

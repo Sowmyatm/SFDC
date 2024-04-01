@@ -1,0 +1,272 @@
+What are all the technical challenges you have faced in your project
+--------------------------------------------------------------------------
+Data Mapping: 
+Some of the common Salesforce integration challenges arise during the data mapping. During the Salesforce
+CRM implementation, there might be a lot of data and field mismatches. In most cases, the field types vary on 
+different applications. 
+
+Data Migration and Data Quality Issues:
+Salesforce is a cloud-based solution which means that all of the data is stored in the cloud. If your company’s 
+information has been previously stored on physical hard drives and servers, the first step would be to migrate all 
+of this data to the cloud
+
+Duplicate Records:
+Duplicate records are another common Salesforce integration challenge that leads to various data-related issues.
+It’s important that you develop a system that can identify duplicate data entries and reduce the data challenges
+ faced in Salesforce projects. 
+ 
+COOKIES: how do you handle browser cookies using selenium give me example with your projects
+ --------------------------------------------------------------------------------------------
+Cookie is a packet of data received by your machine and sent back to the server without being altered or changed.
+For example, when you visit any website, cookies are sent to your machine by the website. Since these cookies 
+contain information, it helps the website keep track of your visits or activity 
+
+WE can handle cookies in Selenium by using driver.manage() method:
+
+getCookies() : It returns the list of all the cookies : 
+driver.manage().getCookies()
+
+getCookieNamed(“Name of Cookie”): It returns the cookie that matches the name specified as the argument
+driver.manage().getCookieNamed(arg0);
+
+addCookie(“Cookie”) : It creates and adds a new cookie : 
+driver.manage().addCookie(cookieName); 
+
+deleteCookie(“Cookie”): It deletes a particular cookie : 
+driver.manage().deleteCookie(arg0); // Deletes the specific cookie
+
+deleteCookieName(“Name of Cookie”) : It deletes the cookie that matches the name specified as the argument
+driver.manage().deleteCookieNamed(arg0); // Deletes the specific cookie by its name
+
+deleteAllCookies : It deletes all the cookies
+
+
+Diff between css and xpath? Why did you choose xpath over css?
+-----------------------------------------------------------------
+ CSS selectors are simpler and faster, ideal for straightforward HTML element selection. XPath, however, offers
+ more flexibility and power, capable of navigating complex and dynamic web page structures, including non-HTML 
+ elements.
+ 
+How do you stay up to date with new developments and best practices in the automation testing industry, and what 
+resources do you rely on for learning and growth?
+ ------------------------------------------------------
+Attend Industry Conferences and Events
+Engage in Continuous Learning
+Read Books, Blogs, and Newsletters
+Take Advantage of Online Courses and Webinars
+Experiment with New Tools and Technologies
+Stay Updated with Industry Certifications
+Cultivate a Curious Mindset
+
+Managing Ajax based components in selenium ?
+------------------------------------------------
+by using waits
+implicit : implicit wait should be declared after the driver object is defined.
+Once it is declared in the pgm, no need to repeat again. IT Waits for page load
+	//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+explicit: waits for slow loading elements,or ajax 
+//elements(Asynchronous java elements),depends on elt to load
+	
+	//WebDriverWait wait= new WebDriverWait(driver,30); //explicit waits declare in the 
+//beginning,use it later using the object
+	
+//	wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(null)))); 
+
+
+fluent: looks for the webelement repeatedly at regular intervals until timeout happens or until the obj is found.
+ more useful with webelements that takes longer duration to load.
+ 
+ 
+How do you handle hidden objects using selenium and explain me with your project
+-----------------------------------------------------------------------------------
+We use JavaScriptExecutor to execute JavaScript code to find the hidden element by its ID.
+We perform actions on the hidden element, such as clicking on it, using JavaScriptExecutor or Actions class.
+
+
+What initially drew you to Selenium as a tool for automation, and how has your understanding and usage of it 
+evolved over the years
+-------------------------------------------------------------------------------------------------------------
+Selenium is an open-source automation testing tool and it is free of cost to use.
+Selenium provides flexibility to write advanced and complex test cases.
+Supports test scripts written in any user-preferred languages such as C#, Java, Perl, PHP, Python, and Ruby
+Supports test case execution on multiple operating systems such as Windows, Linux, Android, Mac, and iOS.
+Supports testing on different web browsers such as Chrome, Firefox, Internet Explorer (IE), Opera, and Safari.
+Test cases can be executed while the browser window is minimized.
+Selenium supports parallel test execution.
+Selenium can be integrated with TestNG and JUnit to generate test reports and manage test cases.
+Selenium can be integrated with Jenkins, Docker, and Maven to attain continuous testing. 
+
+How do you handle Autosuggests I mean search in google you will get some suggestion automatically , how do you 
+select third element ?
+--------------------------------------------------------------------------------------------------------------
+A) Enter text to trigger suggestions: Locate the input field & use the send_keys method to enter the desired text 
+ that will trigger the suggestions.
+B) Wait for suggestions to appear: ...
+C) Locate and select the suggestion:
+
+
+how do you do Proxy settings with webdriver/Working with proxy Servers with selenium web driver
+--------------------------------------------------------------------------------------------------
+Proxy server act as an intermediary for requests between a client and a server
+It can capture network traffic
+Mock backend calls made by the website it can use for the testing 
+Access a website under corporate restrictions/policies
+SETUP:
+------
+Import Selenium WebDriver from the package
+Define the proxy server IP and port that you want to use
+Set ChromeOptions() and set the desire capabilities
+Add the options to the Chrome
+
+
+what is PageLoadTimeout Property in selenium ?
+-------------------------------------------------
+The pageLoadTimeout property in Selenium is used to specify the amount of time WebDriver should wait for a page
+to load completely before throwing a TimeoutException. 
+
+
+How do you approach testing for accessibility and usability issues in web applications, and what tools or 
+techniques do you use to assist in this process?
+----------------------------------------------------------------------------------------------------------
+Conducting an accessibility test is essential to ensure that digital content, websites, and applications are
+ usable & accessible to all users, including those with disabilities.
+ 
+1)Identify who your users are and what their accessibility needs are.
+2)Choose an accessibility testing method, such as manual testing, automated testing, or a combination of both.
+3)Test for accessibility issues, such as keyboard navigation, color contrast
+4)Document and prioritize any accessibility issues found.
+5)Fix the high-priority issues and retest.
+6)Repeat the testing and fixing process until the product is accessible.
+accessibility testing should be an ongoing process, as new content and features are
+added to the product. It's also recommended to involve people with disabilities in the testing process to get 
+their feedback and ensure that the product is truly accessible.
+
+1) Define your usability goals
+Before you start testing, you need to have a clear idea of what you want to achieve with your web app and how 
+you want your users to feel and behave
+You can use various methods to define your usability goals, such as user personas, user stories, user journeys, 
+and scenarios.
+2) Choose your testing methods
+
+3)Plan your testing process
+you need to prepare your web app for testing and create any materials that will be used during the testing 
+sessions, such as test scenarios, tasks, questions, surveys, consent forms, and instructions
+
+4)Evaluate your results
+Once testing is complete, it's important to evaluate the results and draw conclusions. This includes analyzing the 
+data to review and organize it.
+You can use various methods and tools for this, such as qualitative and quantitative analysis, statistics, graphs,
+charts, and reports.
+
+How do you handle test failures and investigate their root causes, especially when dealing with complex or flaky 
+test scenarios?
+------------------------------------------------------------------------------------------------------------------
+Flaky tests fail to produce the same outcome with each individual test run.
+1)Immediately search for the cause of the failure and fix it.
+2)Re-run all failed tests, and if they pass, move on. 
+3)Temporarily disable the test or remove it from the test run group.
+4)Move tests that produce inconsistent results into a separate test run group. This creates a clear expectation
+ that only the tests in this group are flaky, restoring confidence in the rest of your test suite
+
+
+How do you validate the messages from front end application with web services layer?
+-------------------------------------------------------------------------------------
+1)Identify Message Flow: Understand the flow of messages between the front end and the web services layer.
+Identify the endpoints, methods, and protocols used for communication, such as RESTful APIs or SOAP services.
+ 
+2)Web Services Testing: Use tools like Postman, SoapUI, or curl to send requests directly to the web services
+ endpoints and verify the responses.
+ 
+3)Security Testing:Ensure that sensitive data is handled securely & that proper authentication & authorization 
+mechanisms are in place to protect data transmitted between the front end and the web services layer
+
+4)Integration Testing: Perform integration testing to validate end-to-end functionality across the entire system
+
+5)Regression Testing: Continuously monitor and test the messages exchanged between the front end and the 
+web services layer during regression testing to ensure that changes or updates do not introduce regressions or 
+break existing functionality.
+
+
+How do you ensure the stability and maintainability of your automated tests over time, especially as web 
+applications change and evolve?
+----------------------------------------------------------------------------------------------------------
+Use Page Object Model (POM): Implement the Page Object Model design pattern to create a separation between test 
+code and page-specific logic. This improves code maintainability 
+
+Design for Modularity and Reusability: Write modular and reusable test code by breaking down test scenarios into 
+smaller, independent test methods
+
+Use Stable Locators: Choose stable & reliable locators (ex IDs, class names) for identifying web elements. Avoid 
+using locators that are likely to change frequently, such as XPath based on the element's position in the DOM.
+
+Implement Explicit Waits: Use explicit waits to synchronize test execution with the application's dynamic behavior
+
+Version Control: Store test code and related resources in version control systems like Git to track changes, 
+collaborate with team members
+
+Continuous Integration (CI): Integrate automated tests into the CI/CD pipeline to run tests automatically on code
+changes and deployments. Set up regular test execution on CI servers to detect issues early and ensure the
+stability of the application.
+
+Parameterization and Data-Driven Testing: Parameterize test data & use data-driven testing techniques to separate 
+test logic from test data. Store test data in external files or databases, allowing easy updates and maintenance
+without modifying test code.
+
+Cross-Browser and Cross-Platform Testing: Test applications across different browsers and platforms to ensure 
+compatibility and reliability
+
+Monitor Test Results: Monitor test execution results and analyze failures to identify flaky tests, recurring
+issues, or areas for improvement. Maintain a dashboard or reporting mechanism to track test coverage, execution 
+trends, and performance metrics.
+
+What are the benefits you added in the framework?
+-----------------------------------------------------
+
+Modularity: Breaking down the test automation code into smaller, reusable modules or components, such as page 
+objects or utility functions, to promote code reusability and maintainability.
+
+Abstraction: Abstracting away low-level details and implementation complexities by using design patterns like 
+the Page Object Model (POM) to encapsulate page elements and interactions, improving code readability and 
+maintainability.
+
+Parameterization and Data-Driven Testing: Implementing parameterization and data-driven testing techniques to 
+separate test logic from test data, allowing tests to be easily customized and executed with different input 
+values.
+
+Reporting and Logging: Incorporating comprehensive reporting and logging mechanisms to provide detailed insights 
+into test execution results, including test pass/fail status, error messages, screenshots, and performance 
+metrics.
+
+Parallel Execution: Setting up parallel test execution to run tests concurrently across multiple browsers, or 
+environments, reducing overall test execution time and improving efficiency.
+
+Continuous Integration (CI) Integration: Integrating the test automation framework with CI/CD pipelines to 
+automate the execution of tests on code changes, ensuring early detection of defects and seamless delivery of 
+software updates.
+
+Cross-Browser and Cross-Platform Compatibility: Ensuring that tests are compatible with different browsers 
+(e.g., Chrome, Firefox, Safari) and platforms (e.g., Windows, macOS, Linux) to validate application functionality
+ across diverse user environments.
+ 
+ 
+What initially drew you to Selenium as a tool for automation, and how has your understanding and usage of it 
+evolved over the years?
+-----------------------------------------------------------------------------------------------------------------
+due to its open-source nature, cross-browser compatibility, and support for multiple programming languages 
+(Java, Python, C#, etc.)selenium gained attention
+QA engineers chose It coz of its ability to automate web browsers for testing web applications, 
+looking to perform functional and regression testing.
+Selenium WebDriver, the successor to Selenium RC, provided a more robust and efficient API for interacting with
+web elements, improving test stability and performance.
+
+Evolution of Understanding and Usage:
+As QA engineers gained more experience with Selenium, they discovered various best practices and design patterns
+to improve test automation efficiency and maintainability. This includes implementing the Page Object Model (POM)
+using explicit waits, and optimizing test scripts for reusability.
+
+The Selenium community contributed to the development of frameworks and tools built on top of Selenium WebDriver, 
+such as TestNG, JUnit, and Cucumber, which provided additional features and capabilities for test automation.
+Integrations with other tools and technologies, such as CI/CD platforms (Jenkins, Bamboo), version control
+systems (Git, SVN), and cloud testing platforms (Selenium Grid, Sauce Labs), expanded the possibilities for 
+Selenium automation and enabled seamless integration into the software development lifecycle.

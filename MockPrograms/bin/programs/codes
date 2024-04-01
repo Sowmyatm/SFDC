@@ -1,0 +1,147 @@
+//setting up webdriver
+-------------------------
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\kppra\\Downloads\\chromedriver_win32 (1).exe");
+                OR
+WebDriverManager.ChromeDriver().setup();
+WebDriver driver = new ChromeDriver();
+
+ChromeDriver class is implementing all the methods available in WebDriver interface
+we are creating an instance of the WebDriver interface and casting it to ChromeDriver Class. All the browser drivers 
+like FirefoxDriver, ChromeDriver, InternetExplorerDriver, PhantomJSDriver, SafariDriver etc can implement the WebDriver interface
+	
+ChromeDriver driver = new ChromeDriver();
+here chrome driver class implements the methods of chromedriver interface
+The ChromeDriver instance will be only able to invoke and act on the methods implemented by ChromeDriver and 
+supported by google-chrome only.
+	
+
+//To handle multiple windows
+---------------------------------
+driver.getWindowHandles()-handle all the opened windows
+driver.getWindowHandle()- handle the main window/current window
+
+Set<String> windowsID =driver.getWindowHandles();
+Iterator<String>itr = WindowsID.iterator(); 
+{
+	while(itr.hasnext){
+	sysout(itr.next);
+}
+
+
+//To handle window size
+------------------------
+driver.manage().window().maximize();
+
+
+//Take Screenshot
+---------------------
+TakesScreenshot screenshot = (TakesScreenshot) driver;
+File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
+String dstPath = System.getProperty("user.dir")+"\\src\\test\\java\\screenshots\\";
+File dstFile = new File(dstPath);
+FileUtils.copyFile(sourceFile,dstFile);
+return dstPath;
+
+//upload file - using sendkeys or robot class method
+-------------
+WebDriverManager.ChromeDriver().setup();
+WebDriver driver = new ChromeDriver();
+driver.get(URL);
+
+WebElement element = driver.findElement(By.name("uploadfile"));
+element.click();
+uploadFile("path to the file");
+
+//double click action
+---------------------------
+Actions action = new Actions(driver);
+WebElement elementLocator = driver.findElement(By.id("ID"));
+action.doubleClick(elementLocator).perform();
+
+
+//mousehover
+-------------
+Actions action = new Actions(driver);
+action.moveToElement(usrmnu).build().perform();
+
+//code to read properties file
+------------------------------
+String PropFilePath = "C:\\Users\\user\\eclipse-workspace\\FileHandling\\src\\main\\java\\com\\files\\sample.properties";
+		FileReader fr = new FileReader(PropFilePath);
+		Properties p = new Properties();
+		p.load(fr);
+		System.out.println(p.getProperty("name"));
+
+
+//write javascript executor to send the text to textbox
+----------------------------------------------------------
+//JSExecutor = It is an interface used to execute javascript through selenium webdriver
+	
+	//JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executescript("arguments[0].value='sowmya.prasi@gmail.com';",button);
+	
+	//alert=
+	//js.executeScript("alert('Welcome to JAVA');");
+	
+	//click=
+	//js.executeScript("arguments[0].click();",button(webelt));
+	
+	//scrollBy = 
+	//js.executeScript(window.scrollBy(0,700);");
+	
+	//manipulate attributes 
+
+	//title
+	
+	//sendkeys = js.executescript("arguments[0].value='sowmya.prasi@gmail.com';",button);
+	
+	//iframes = driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='']")));
+	 
+	
+//Robot class= to perform keyboard and mouse actions
+------------------------------------------------------
+	//Robot r = new Robot();
+	//r.keyPress(KeyEvent.VK_ENTER);
+	//r.keyRelease(KeyEvent.VK_Enter);
+	
+	//Drag and Drop - actions class
+	--------------------------------
+	//Actions action = new Actions(driver);
+	//action.clickAndHold(target elet).moveToElement(drop).release().build().perform();
+	
+
+//code for data provider method
+---------------------------------
+@DataProvider(name="data")
+	public String[][] getdata(String excelSheetName) throws InvalidFormatException, IOException {
+		
+		
+		File f = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\usrnmepwd.xlsx");
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb= WorkbookFactory.create(fis);
+		Sheet sheetName = wb.getSheet(excelSheetName);
+
+
+//Implicit wait
+----------------
+Selenium WebDriver waits for a certain measure of time before throwing an exception.Once this 
+time is set, WebDriver will wait for the element before the exception occurs.
+IT Waits for page to load. Once it is declared in the pgm, no need to repeat again. 
+
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+
+
+//explicit wait
+---------------
+waits for elt to load, waits for slow loading elts or ajax elts.declare in the beginning of the 
+pgm, later access it by using the obj
+
+WebDriverWait wait= new WebDriverWait(driver,30); //
+wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(null)))); 
+
+
+//fluent wait
+---------------
+Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or 
+until the object is found.
+

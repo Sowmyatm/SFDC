@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-10T10:08:22 PDT" name="Suite" finished-at="2023-10-10T10:08:22 PDT" duration-ms="45">
+    <groups>
+    </groups>
+    <test started-at="2023-10-10T10:08:22 PDT" name="Test" finished-at="2023-10-10T10:08:22 PDT" duration-ms="45">
+      <class name="testngpractice.test">
+        <test-method signature="test1()[pri:0, instance:testngpractice.test@22e357dc]" started-at="2023-10-10T10:08:22 PDT" name="test1" finished-at="2023-10-10T10:08:22 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- testngpractice.test -->
+      <class name="testngpractice.testngpractice2">
+        <test-method signature="test2()[pri:0, instance:testngpractice.testngpractice2@53976f5c]" started-at="2023-10-10T10:08:22 PDT" name="test2" finished-at="2023-10-10T10:08:22 PDT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+      </class> <!-- testngpractice.testngpractice2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
